@@ -1,12 +1,3 @@
-<?php 
-    $display="";
-    if(isset($_GET['option'])) {
-        if(htmlspecialchars($_GET['option'])=="com_users") {
-            $display="none";
-        }
-        $display="none"; 
-    }
-?>
 <?php defined('_JEXEC') or die('Restricted access');?>
 <!DOCTYPE html>
 <html xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
