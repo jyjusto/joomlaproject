@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>Module - Facebook Comments By Internet Partner</name>
+    <author>InternetPartner.info</author>
+	<creationDate>Februar, 2012</creationDate>
+	<copyright>Copyright (C) 2011 InternetPartner.info All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>office@internetiartner.info</authorEmail>
+	<authorUrl>http://internetpartner.info/en/</authorUrl>
+	<version>1.2</version>
+    <description><![CDATA[
+	<h1>Facebook Comments By Internet Partner</h1>
+	To allow Facebook Comments you dont need to do anything<br>
+	If you want to moderate your Facebook comments you will need Facebook API key.<br>
+	If you want to administrate your FB commnents insert facebook user id<br>
+	<a href="http://internetpartner.info/en/" target="_blank" >More information on InternetPartner.info </a> <br />
+	<img src='/modules/mod_wsfbcom/logo.png' /><br /> <br />  <br />    
+	]]></description>	
+    <files>
+      <filename module="mod_wsfbcom">mod_wsfbcom.php</filename>
+		<filename>index.html</filename>
+		<filename>logo.png</filename>			
+    </files>	
+	<config>
+		<fields name="params">	
+			<fieldset name="top" label="Settings">
+				<field 
+					name="data-num-posts" 
+					type="text" 
+					default="4" 
+					size="10" 
+					label="Number of posts to show" 
+					description="Number of posts to show" />	
+				<field 
+					name="data-width" 
+					type="text" 
+					default="500" 
+					size="10" 
+					label="Data width" 
+					description="Facebook data width" />											
+				<field 
+					name="data-colorscheme" 
+					type="list" 
+					default="" 
+					label="Color sheme" 
+					description="Facebook color sheme" >
+				   	<option value="">Light</option>
+				   	<option value="dark">Dark</option></field>
+				<field 
+					name="appId" 
+					type="text" 
+					default="" 
+					size="40" 
+					label="App ID/API key" 
+					description="Enter Facebook API ID." />				   	
+				<field 
+					name="adminID" 
+					type="text" 
+					default="" 
+					size="60" 
+					label="Admin - FB user ID" 
+					description="Enter Facebook users IDS" />
+				<field 
+					name="lang" 
+					type="list" 
+					default=""
+					label="Override with lang"
+					description="Override site language with FB language" >										
+						<option></option>
+						<option value="af_ZA">Afrikaans</option>
+						<option value="sq_AL">Albanian</option>
+						<option value="ar_AR">Arabic</option>
+						<option value="hy_AM">Armenian</option>
+						<option value="az_AZ">Azeri</option>
+						<option value="eu_ES">Basque</option>
+						<option value="be_BY">Belarusian</option>
+						<option value="bn_IN">Bengali</option>
+						<option value="bs_BA">Bosnian</option>
+						<option value="bg_BG">Bulgarian</option>
+						<option value="ca_ES">Catalan</option>
+						<option value="hr_HR">Croatian</option>
+						<option value="cs_CZ">Czech</option>
+						<option value="da_DK">Danish</option>
+						<option value="nl_NL">Dutch</option>
+						<option value="en_PI">English (Pirate)</option>
+						<option value="en_GB">English (UK)</option>
+						<option value="en_UD">English (Upside Down)</option>
+						<option value="en_US">English (US)</option>
+						<option value="eo_EO">Esperanto</option>
+						<option value="et_EE">Estonian</option>
+						<option value="fo_FO">Faroese</option>
+						<option value="tl_PH">Filipino</option>
+						<option value="fi_FI">Finnish</option>
+						<option value="fr_CA">French (Canada)</option>
+						<option value="fr_FR">French (France)</option>
+						<option value="fy_NL">Frisian</option>
+						<option value="gl_ES">Galician</option>
+						<option value="ka_GE">Georgian</option>
+						<option value="de_DE">German</option>
+						<option value="el_GR">Greek</option>
+						<option value="he_IL">Hebrew</option>
+						<option value="hi_IN">Hindi</option>
+						<option value="hu_HU">Hungarian</option>
+						<option value="is_IS">Icelandic</option>
+						<option value="id_ID">Indonesian</option>
+						<option value="ga_IE">Irish</option>
+						<option value="it_IT">Italian</option>
+						<option value="ja_JP">Japanese</option>
+						<option value="km_KH">Khmer</option>
+						<option value="ko_KR">Korean</option>
+						<option value="ku_TR">Kurdish</option>
+						<option value="la_VA">Latin</option>
+						<option value="lv_LV">Latvian</option>
+						<option value="fb_LT">Leet Speak</option>
+						<option value="lt_LT">Lithuanian</option>
+						<option value="mk_MK">Macedonian</option>
+						<option value="ms_MY">Malay</option>
+						<option value="ml_IN">Malayalam</option>
+						<option value="ne_NP">Nepali</option>
+						<option value="nb_NO">Norwegian (bokmal)</option>
+						<option value="nn_NO">Norwegian (nynorsk)</option>
+						<option value="ps_AF">Pashto</option>
+						<option value="fa_IR">Persian</option>
+						<option value="pl_PL">Polish</option>
+						<option value="pt_BR">Portuguese (Brazil)</option>
+						<option value="pt_PT">Portuguese (Portugal)</option>
+						<option value="pa_IN">Punjabi</option>
+						<option value="ro_RO">Romanian</option>
+						<option value="ru_RU">Russian</option>
+						<option value="sr_RS">Serbian</option>
+						<option value="zh_CN">Simplified Chinese (China)</option>
+						<option value="sk_SK">Slovak</option>
+						<option value="sl_SI">Slovenian</option>
+						<option value="es_LA">Spanish</option>
+						<option value="es_ES">Spanish (Spain)</option>
+						<option value="sw_KE">Swahili</option>
+						<option value="sv_SE">Swedish</option>
+						<option value="ta_IN">Tamil</option>
+						<option value="te_IN">Telugu</option>
+						<option value="th_TH">Thai</option>
+						<option value="zh_HK">Traditional Chinese (Hong Kong)</option>
+						<option value="zh_TW">Traditional Chinese (Taiwan)</option>
+						<option value="tr_TR">Turkish</option>
+						<option value="uk_UA">Ukrainian</option>
+						<option value="vi_VN">Vietnamese</option>
+						<option value="cy_GB">Welsh</option>
+				</field>				
+			</fieldset>
+		
+			<fieldset name="blockip" label="Block specific IP">
+				<field 
+					name="blockedIPs" 
+					type="textarea" 
+					default="" 
+					label="Blocked IPs" 
+					description="Enter an IP number that you would like to block. Devide the addresses by comma." cols="30" rows="8" />
+				<field 
+					name="altMessage" 
+					type="textarea" 
+					default="" 
+					label="Message on blocked IP" 
+					description="Enter a message to show when blocked IPs try to load the page."  cols="30" rows="8"/>
+			</fieldset>		
+		</fields>
+	</config>
+</extension>

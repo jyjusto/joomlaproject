@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.6" type="template">
+	<name>start_up</name>
+	<creationDate>2008-10-29</creationDate>
+	<author>Jayson Justo</author>
+	<authorEmail>jyjusto@yahoo.com</authorEmail>
+	<authorUrl>http://www.example.com</authorUrl>
+	<copyright>Jayson Justo 2016</copyright>
+	<license>GNU/GPL</license>
+	<version>1.0.2</version>
+	<description>Jayson Justo Template</description>
+	<copyright>Copyright (C) 2016 website.com. All rights reserved.</copyright>
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>images</folder>
+		<folder>css</folder>
+		<folder>assets</folder>
+		<folder>html</folder>
+	</files>
+	<positions>
+        <position>top-menu</position>
+        <position>top-articles</position>
+        <position>latest-articles</position>
+        <position>old-articles</position>
+        <position>twitter-feeds</position>
+        <position>rss-feeds</position>
+        <position>breadcrumb</position>
+        <position>footer</position>
+    </positions>
+</extension>
