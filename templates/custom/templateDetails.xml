@@ -17,6 +17,7 @@
 	</files>
 	<positions>
         <position>navbar-menu</position>
+        <position>user-menu</position>
         <position>banner</position>
         <position>top-articles</position>
         <position>latest-articles</position>

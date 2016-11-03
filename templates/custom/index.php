@@ -57,72 +57,45 @@
             <jdoc:include type="message" />
             <jdoc:include type="component" />
         </div>
-        <?php if ($this->countModules('twitter-feeds')) : ?>
-        <div class="col-md-3" style="">
-            <div style="border:1px solid #ccc">
-                <h4 style="color:dodgerblue" class="text-center">Twitter Feeds</h4>
-                <jdoc:include type="modules" name="twitter-feeds" style="none" />
+        <div class="col-md-3">
+            <div class="col-md-12">
+                <?php if ($this->countModules('user-menu')) : ?>
+                <div style="border:1px solid #ccc;margin:10px 0">
+                    <h4 style="color:dodgerblue" class="text-center">User Menu</h4>
+                    <jdoc:include type="modules" name="user-menu" style="none" />
+                </div>
+                <?php endif; ?>
+            </div>
+            <div class="col-md-12">
+                <?php if ($this->countModules('twitter-feeds')) : ?>
+                <div style="border:1px solid #ccc">
+                    <h4 style="color:dodgerblue" class="text-center">Twitter Feeds</h4>
+                    <jdoc:include type="modules" name="twitter-feeds" style="none" />
+                </div>
+                <?php endif; ?>
             </div>
         </div>
-        <?php endif; ?>
     </div>
     
     <?php if ($this->countModules('old-articles')) : ?>
     <div class="container">
-        <h1 class="text-center">Older Articles</h1>
         <jdoc:include type="modules" name="old-articles" style="none" />
     </div>
     <?php endif; ?>
+
+    <?php if ($this->countModules('advertisements')) : ?>
     <h1 class="text-center">Advertisements </h1>
-    <div class="container"><img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/download.jpg"></div>
+    <div class="container">
+        <img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/download.jpg">
+    </div>
+    <?php endif; ?>
+
+    <?php if ($this->countModules('rss-feeds')) : ?>
     <h1 class="text-center">RSS</h1>
     <div class="container">
-        <div class="media">
-            <div class="media-left">
-                <a><img class="media-object"></a>
-            </div>
-            <div class="media-body">
-                <h4 class="media-heading">Media Heading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus nisl ac diam feugiat, non vestibulum libero posuere. Vivamus pharetra leo non nulla egestas, nec malesuada orci finibus. </p>
-            </div>
-        </div>
-        <div class="media">
-            <div class="media-left">
-                <a><img class="media-object"></a>
-            </div>
-            <div class="media-body">
-                <h4 class="media-heading">Media Heading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus nisl ac diam feugiat, non vestibulum libero posuere. Vivamus pharetra leo non nulla egestas, nec malesuada orci finibus. </p>
-            </div>
-        </div>
-        <div class="media">
-            <div class="media-left">
-                <a><img class="media-object"></a>
-            </div>
-            <div class="media-body">
-                <h4 class="media-heading">Media Heading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus nisl ac diam feugiat, non vestibulum libero posuere. Vivamus pharetra leo non nulla egestas, nec malesuada orci finibus. </p>
-            </div>
-        </div>
-        <div class="media">
-            <div class="media-left">
-                <a><img class="media-object"></a>
-            </div>
-            <div class="media-body">
-                <h4 class="media-heading">Media Heading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus nisl ac diam feugiat, non vestibulum libero posuere. Vivamus pharetra leo non nulla egestas, nec malesuada orci finibus. </p>
-            </div>
-        </div>
-        <div class="media">
-            <div class="media-left">
-                <a><img class="media-object"></a>
-            </div>
-            <div class="media-body">
-                <h4 class="media-heading">Media Heading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus nisl ac diam feugiat, non vestibulum libero posuere. Vivamus pharetra leo non nulla egestas, nec malesuada orci finibus. </p>
-            </div>
-        </div>
+        <jdoc:include type="modules" name="rss-feeds" style="none" />
     </div>
+    <?php endif; ?>
     <section class="features">
         <div class="container">
             <div class="row">
