@@ -81,8 +81,6 @@ if ($this->params->get('templateColor'))
 
 // Check for a custom CSS file
 $userCss = JPATH_SITE . '/templates/' . $this->template . '/css/user.css';
-// jquery file
-$jquery = JPATH_SITE . '/templates/' . $this->template . '/js/jquery-1.11.0.min.js';
 
 if (file_exists($userCss) && filesize($userCss) > 0)
 {
@@ -139,18 +137,6 @@ else
 	. ($params->get('fluidContainer') ? ' fluid' : '');
 	echo ($this->direction == 'rtl' ? ' rtl' : '');
 ?>">
-	<!-- Facebook Comment integration -->
-	<div id="fb-root"></div>
-	<script>
-		(function(d, s, id) {
-		  	var js, fjs = d.getElementsByTagName(s)[0];
-		  	if (d.getElementById(id)) return;
-		  	js = d.createElement(s); js.id = id;
-		  	js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-		  	fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
-
 	<!-- Body -->
 	<div class="body">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
@@ -158,7 +144,7 @@ else
 			<header class="header" role="banner">
 				<div class="header-inner clearfix">
 					<a class="brand pull-left" href="<?php echo $this->baseurl; ?>/">
-						<?php  echo $logo; ?>
+						<?php echo $logo; ?>
 						<?php if ($this->params->get('sitedescription')) : ?>
 							<?php echo '<div class="site-description">' . htmlspecialchars($this->params->get('sitedescription'), ENT_COMPAT, 'UTF-8') . '</div>'; ?>
 						<?php endif; ?>
@@ -170,7 +156,7 @@ else
 			</header>
 			<?php if ($this->countModules('position-1')) : ?>
 				<nav class="navigation" role="navigation">
-					<div class="navbar pull-left">
+					<div class="navbar pull-right">
 						<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -211,7 +197,6 @@ else
 			</div>
 		</div>
 	</div>
-
 	<!-- Footer -->
 	<footer class="footer" role="contentinfo">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
@@ -230,10 +215,3 @@ else
 	<jdoc:include type="modules" name="debug" style="none" />
 </body>
 </html>
-<script type="text/javascript" src="http://<?php echo $_SERVER['HTTP_HOST'].$this->baseurl.'/templates/'.$this->template.'/js/jquery-1.11.0.min.js'; ?>"></script>
-<script type="text/javascript">
-	var a_count=$('.page-header h2 a').length;
-	for(var i=0; i<a_count;i++) {
-		//$()
-	}
-</script> 
