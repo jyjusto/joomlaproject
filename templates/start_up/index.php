@@ -60,13 +60,6 @@
     <section class="testimonials">
         <h2 class="text-center">Articles </h2></section>
     <div class="container">
-                    <jdoc:include type="modules" name="position-3" style="xhtml" />
-                    <jdoc:include type="message" />
-                    <jdoc:include type="component" />
-                    <jdoc:include type="modules" name="position-2" style="none" />
-                    <!-- End Content -->
-    </div>
-    <div class="container">
         <div class="col-md-5">
             <div class="thumbnail"><img></div>
         </div>
