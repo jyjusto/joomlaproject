@@ -1,6 +1,14 @@
 
-    <?php //var_dump($_GET);exit;?>
-<?php defined('_JEXEC') or die('Restricted access');?>
+<?php 
+
+    defined('_JEXEC') or die('Restricted access');
+
+    $app = JFactory::getApplication();
+    $doc = JFactory::getDocument();
+    $user = JFactory::getUser();
+
+    $sitename = $app->get('sitename');
+?>
 <!DOCTYPE html>
 <html xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
 <head>
@@ -27,8 +35,7 @@
     </script>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">  
-
-            <a class="navbar-brand navbar-link" href="#"><span class="glyphicon glyphicon-king"></span>Website</a>             
+            <a class="navbar-brand navbar-link" href="<?php echo $this->baseurl; ?>/"><span class="glyphicon glyphicon-king"></span><?php echo $sitename;?></a>             
             <?php if ($this->countModules('navbar-menu')) : ?>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1">
@@ -52,12 +59,12 @@
     <?php endif; ?>
     <br>
     <section class="testimonials">
-    <div class="container">
-        <div class="col-md-9">
+    <div class="container" style="margin:10px auto">
+        <div class="col-md-8 col-s-8 col-xs-12">
             <jdoc:include type="message" />
             <jdoc:include type="component" />
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4 col-s-4 col-xs-12">
             <div class="col-md-12">
                 <?php if ($this->countModules('user-menu')) : ?>
                 <div style="border:1px solid #ccc;margin:10px 0">
