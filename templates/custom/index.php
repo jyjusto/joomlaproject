@@ -8,6 +8,14 @@
     $user = JFactory::getUser();
 
     $sitename = $app->get('sitename');
+    $user_id = $user->get('id');
+    $option = $app->input->getCmd('option', '');
+    $view = $app->input->getCmd('view', '');
+    $layout = $app->input->getCmd('layout', '');
+    $task = $app->input->getCmd('task', '');
+    $itemid = $app->input->getCmd('Itemid', '');
+
+    // echo $view.'-'.$option.'-'.$itemid.'-'.$task.'-'.$layout;exit;
 ?>
 <!DOCTYPE html>
 <html xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
@@ -67,18 +75,20 @@
         <div class="col-md-4 col-s-4 col-xs-12">
             <div class="col-md-12">
                 <?php if ($this->countModules('user-menu')) : ?>
-                <div style="border:1px solid #ccc;margin:10px 0">
-                    <h4 style="color:dodgerblue" class="text-center">User Menu</h4>
-                    <jdoc:include type="modules" name="user-menu" style="none" />
-                </div>
+                    <?php if($user_id) : ?>
+                        <div style="border:1px solid #ccc;margin:10px 0">
+                            <h4 style="color:dodgerblue" class="text-center">User Menu</h4>
+                            <jdoc:include type="modules" name="user-menu" style="none" />
+                        </div>
+                    <?php endif; ?>
                 <?php endif; ?>
             </div>
             <div class="col-md-12">
                 <?php if ($this->countModules('twitter-feeds')) : ?>
-                <div style="border:1px solid #ccc">
-                    <h4 style="color:dodgerblue" class="text-center">Twitter Feeds</h4>
-                    <jdoc:include type="modules" name="twitter-feeds" style="none" />
-                </div>
+                    <div style="border:1px solid #ccc">
+                        <h4 style="color:dodgerblue" class="text-center">Twitter Feeds</h4>
+                        <jdoc:include type="modules" name="twitter-feeds" style="none" />
+                    </div>
                 <?php endif; ?>
             </div>
         </div>
