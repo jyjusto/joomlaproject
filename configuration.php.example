@@ -13,10 +13,10 @@ class JConfig {
 	public $debug_lang = '0';
 	public $dbtype = 'pdomysql';
 	public $host = 'localhost';
-	public $user = 'joomla';
-	public $password = 'joomla';
-	public $db = 'joomlaproject';
-	public $dbprefix = 'jru28_';
+	public $user = 'u107173073_p101u';
+	public $password = 'project101';
+	public $db = 'u107173073_db';
+	public $dbprefix = 'p101_';
 	public $live_site = '';
 	public $secret = 'sC5ZZHYE1aoDb9ca';
 	public $gzip = '0';
