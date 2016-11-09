@@ -140,43 +140,6 @@ else
 	<!-- Body -->
 	<div class="body">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
-		
-			<?php if ($this->countModules('position-4')) : ?>
-				<div id="block" class="span3">
-				<!-- Begin position-4 position -->
-				<jdoc:include type="modules" name="position-4" style="xhtml" />
-				<!-- End position-4 position -->
-				</div>
-			<?php endif; ?>
-			<?php if ($this->countModules('position-5')) : ?>
-				<div id="block" class="span3">
-				<!-- Begin position-5 position -->
-				<jdoc:include type="modules" name="position-5" style="xhtml" />
-				<!-- End position-5 position -->
-				</div>
-			<?php endif; ?>
-			<?php if ($this->countModules('position-6')) : ?>
-				<div id="block" class="span3">
-				<!-- Begin position-6 position -->
-				<jdoc:include type="modules" name="position-6" style="xhtml" />
-				<!-- End position-6 position -->
-				</div>
-			<?php endif; ?>
-			<?php if ($this->countModules('position-9')) : ?>
-				<nav class="navigation" role="navigation">
-					<div class="navbar pull-right">
-						<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</a>
-					</div>
-					<div class="nav-collapse">
-						<jdoc:include type="modules" name="position-9" style="none" />
-					</div>
-				</nav>
-			<?php endif; ?>
-			
 			<!-- Header -->
 			<header class="header" role="banner">
 				<div class="header-inner clearfix">
