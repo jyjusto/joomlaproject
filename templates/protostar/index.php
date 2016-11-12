@@ -171,6 +171,14 @@ else
 							<span class="icon-bar"></span>
 						</a>
 					</div>
+					<div class="header-search pull-right">
+						<div class="box">
+						  <div class="container-2">
+							  <span class="icon"><i class="fa fa-search"></i></span>
+							  <input type="search" id="search" placeholder="Search..." />
+						  </div>
+						</div>
+					</div>
 					<div class="nav-collapse">
 						<jdoc:include type="modules" name="position-9" style="none" />
 					</div>
@@ -180,6 +188,9 @@ else
 			<!-- Header -->
 			<header class="header" role="banner">
 				<div class="header-inner clearfix">
+				<div class="header-logo pull-left">
+					<jdoc:include type="modules" name="logo" style="none" />
+				</div><!--
 					<a class="brand pull-left" href="<?php echo $this->baseurl; ?>/">
 						<?php echo $logo; ?>
 						<?php if ($this->params->get('sitedescription')) : ?>
@@ -188,7 +199,7 @@ else
 					</a>
 					<div class="header-search pull-right">
 						<jdoc:include type="modules" name="position-0" style="none" />
-					</div>
+					</div>-->
 				</div>
 			</header>
 			<?php if ($this->countModules('position-1')) : ?>
